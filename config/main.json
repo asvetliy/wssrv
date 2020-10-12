@@ -1,0 +1,52 @@
+{
+  "service": {
+    "log_level": "INFO",
+    "port": 8889
+  },
+  "repository": {
+    "type": "memory",
+    "options": {
+      "publisher": {
+        "options": {
+          "threads": 2
+        }
+      }
+    }
+  },
+  "entrypoints": [
+    {
+      "type": "kafka_consumer",
+      "options": {
+        "brokers": [
+          "kafka:9092"
+        ],
+        "threads": 4,
+        "consumer": {
+          "group_id": "pamm_wssrv",
+          "topics": [
+            "pamm"
+          ],
+          "ssl": {
+            "ca": "/path/to/ca",
+            "cert": "/path/to/cert",
+            "key": "key",
+            "password": "password"
+          },
+          "sasl": {
+            "username": "username",
+            "password": "password",
+            "mechanism": "PLAIN"
+          },
+          "events": {
+            "events_params": {
+              "name_path": "event.name"
+            },
+            "events_array": {
+
+            }
+          }
+        }
+      }
+    }
+  ]
+}
