@@ -1,0 +1,2 @@
+# wssrv
+WebSocket Server microservice
