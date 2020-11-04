@@ -24,7 +24,7 @@
         "consumer": {
           "group_id": "pamm_wssrv",
           "topics": [
-            "pamm"
+            "quotes"
           ],
           "ssl": {
             "ca": "/path/to/ca",
