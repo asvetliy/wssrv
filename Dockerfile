@@ -11,4 +11,4 @@ RUN chown -R pyuser:pygroup /home/pyuser
 
 USER pyuser
 
-CMD ["python", "/home/pyuser/app/pamm/cmd/main.py"]
+CMD ["python", "/home/pyuser/app/wssrv/cmd/main.py"]

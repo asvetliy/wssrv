@@ -22,7 +22,7 @@
         ],
         "threads": 4,
         "consumer": {
-          "group_id": "pamm_wssrv",
+          "group_id": "quotes_wssrv",
           "topics": [
             "quotes"
           ],
@@ -39,10 +39,20 @@
           },
           "events": {
             "events_params": {
-              "name_path": "event.name"
+              "name_path": "type"
             },
             "events_array": {
-
+              "quote": {
+                "attributes": {
+                  "symbol": "symbol",
+                  "bid": "bid",
+                  "ask": "ask",
+                  "type": "type"
+                },
+                "options": {
+                  "request_object_type": "AddMessage"
+                }
+              }
             }
           }
         }
